@@ -1,8 +1,8 @@
 <br><br>
-<h1>Edite Post</h1>
-<%= form_for :post, url: post_path(@post), method: :patch do |f| %>
-  <% if @post.errors.any? %>
-    <% @post.errors.full_messages.each do |msg| %>
+<h1>Edit Book</h1>
+<%= form_for :book, url: book_path(@book), method: :patch do |f| %>
+  <% if @book.errors.any? %>
+    <% @book.errors.full_messages.each do |msg| %>
       <div class="alert alert-danger"><%= msg %></div>
     <% end %>
   <% end %>
@@ -14,6 +14,11 @@
   <p>
     <%= f.label :body %><br>
     <%= f.text_field(:body, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :price %><br>
+    <%= f.text_field(:price, {:class => 'form-control'}) %>
   </p>
 
   <p>
