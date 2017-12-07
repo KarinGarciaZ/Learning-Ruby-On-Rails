@@ -1,0 +1,11 @@
+<br><br>
+<h2><%= @book.title %></h2>
+<h3><%= @book.price %></h3>
+<p><%= @book.body %></p>
+<hr>
+<%= link_to "Edit", edit_book_path(@book), :class => 'btn btn-primary' %>
+<%= link_to "Delete", 
+  book_path(@book), 
+  method:  :delete,
+  data: {confirm: 'Are you sure?'},
+  :class => 'btn btn-danger' %>

@@ -1,0 +1,10 @@
+<br><br>
+<h1>All Posts and Books</h1>
+
+<% @books.each do |book| %>
+  <div class="well">
+    <h3><%= book.title %></h3>
+    <p><%= book.price %></p>
+    <%= link_to "Read More", book_path(book), :class => 'btn btn-default' %>
+  </div>
+<% end %>
